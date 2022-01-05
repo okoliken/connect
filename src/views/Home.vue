@@ -1,4 +1,10 @@
+<template>
+  <Post />
+</template>
+
 <script>
+import Post from "../components/Post.vue";
+
 export default {
   data() {
     return {
@@ -13,15 +19,13 @@ export default {
   mounted() {
     this.message();
   },
+  components: {
+    Post,
+  },
 };
 </script>
 
-<template>
-  <h2 class="text-5xl">home</h2>
-  <p>{{ msg }}</p>
-</template>
-
-<style>
+<style scoped>
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;

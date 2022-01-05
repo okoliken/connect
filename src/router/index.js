@@ -10,6 +10,9 @@ const routes = [
     name: "Home",
     component: Home,
     props: true,
+    meta: {
+      title: "Connect | Home",
+    },
   },
   {
     path: "/About",
@@ -21,17 +24,28 @@ const routes = [
     path: "/authentication/Register",
     name: "Register",
     component: Register,
+    meta: {
+      title: "Connect | Register",
+    },
   },
   {
     path: "/authentication/Login",
     name: "Login",
     component: Login,
+    meta: {
+      title: "Connect | Login",
+    },
   },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  document.title = `${to.meta.title}`;
+  next();
 });
 
 export default router;
