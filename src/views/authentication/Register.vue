@@ -3,6 +3,7 @@ import { computed, reactive } from "vue";
 import useValidate from "@vuelidate/core";
 
 import { required, email, minLength, sameAs } from "@vuelidate/validators";
+import router from "../../router";
 
 // import axios from "axios";
 export default {
@@ -49,8 +50,6 @@ export default {
         confirm_password,
       };
 
-      
-
       try {
         const res = await fetch(
           "https://tofumi-universal-api.herokuapp.com/api/v1/register",
@@ -62,6 +61,7 @@ export default {
         );
 
         const datar = await res.json();
+        router.push({ name: "Login" });
 
         console.log(datar);
       } catch (error) {
@@ -129,17 +129,7 @@ export default {
         />
       </div>
       <button
-        class="
-          text-white
-          font-semibold
-          py-2
-          px-12
-          text-center
-          bg-gray-900
-          w-full
-          capitalize
-          rounded-lg
-        "
+        class="text-white font-semibold py-2 px-12 text-center bg-gray-900 w-full capitalize rounded-lg"
       >
         sign up
       </button>
