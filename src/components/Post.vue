@@ -1,9 +1,9 @@
 <template>
   <div
-    class="container mx-auto flex items-center justify-center max-w-7xl rounded my-10"
+    class="container mx-auto flex items-center justify-center max-w-7xl rounded my-32"
   >
     <div
-      class="w-full md:w-1/2 hover:shadow-lg p-3 hover:border-green-500 border-2 transform hover:-skew-x-1 rounded-md"
+      class="w-full md:w-1/2 hover:shadow-lg p-3 hover:border-green-500 border-2 transform hover:-skew-x-1 rounded-md mx-5"
     >
       <p class="text-dark capitalize">Author: Jeff</p>
 
