@@ -103,12 +103,12 @@ export default {
         >signup</router-link
       >
     </p>
-    <p class="capitalize font-semibold text-sm my-3 text-center">
+    <!-- <p class="capitalize font-semibold text-sm my-3 text-center">
       forgot password?
       <router-link class="text-blue-600" :to="{ name: 'Register' }"
         >click here to reset it</router-link
       >
-    </p>
+    </p> -->
   </div>
 </template>
 
